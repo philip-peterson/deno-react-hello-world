@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Deno Cards</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <style>
+    body {
+      background-color: gold;
+      text-align: center;
+    }
+
+    #cards-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 500px;
+    }
+
+    img {
+      width: 145px;
+      margin: 5px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Card Trick</h1>
+  <section id="cards-section">
+    <div id="cards-wrapper"></div>
+  </section>
+</body>
+
+<script>
+
+  async function initialData() {
+    const response = await fetch('https://deckofcardsapi.com/api/deck/new/draw/?count=21');
+    const json = await response.json();
+
+    const { cards } = json;
+    cards.forEach(({ image, code }) => {
+      const img = document.createElement("img");
+      img.src = image;
+
+      const section = document.getElementById("cards-wrapper");
+      section.appendChild(img);
+    });
+  }
+  initialData();
+
+</script>
+
+</html>
