@@ -4,7 +4,7 @@ const Foo: React.FC<{}> = () => {
 	const [counter, setCounter] = React.useState(0);
 	return (
 		<div>
-			counter = {counter}
+			counter = {counter}{' '}
 			<button onClick={() => { setCounter(counter + 1) }}>Increment</button>
 		</div>
 	);

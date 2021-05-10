@@ -1,13 +1,24 @@
-# Deno Hello World
-![image](https://user-images.githubusercontent.com/16295402/82130124-c725ed80-979e-11ea-9755-8898b058e953.png)
+# Deno React Hello World
+![image](image.png)
 
 ## Running it
 Set up [deno](https://deno.land/#installation) on your machine
 
 Then run 
 
-`./start.sh`
+`./build.sh`
 
-or 
+and then open a web browser 
 
-`deno run --allow-net --allow-read index.ts`
+```
+xdg-open index.html    # (Linux)
+
+# or...
+
+open index.html    # (Mac)
+```
+
+
+## Credits
+
+Forked from https://github.com/rsmelo92/deno-hello-world
