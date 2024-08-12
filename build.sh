@@ -1,1 +1,1 @@
-deno bundle --config ./tsconfig.json index.tsx bundle.js
+deno run -A https://deno.land/x/esbuild@v0.17.16/mod.js --bundle index.tsx --outdir=out --platform=browser
